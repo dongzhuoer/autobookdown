@@ -10,12 +10,13 @@ jobs:
   include:
     - stage: build                
       name: yihui/bookdown-demo            
-      script: echo yihui bookdown-demo
+      script: mkdir -p output/yihui/bookdown-demo && echo yihui bookdown-demo
     - name: yihui/r-ninja            
-      script: echo yihui r-ninja
+      script: mkdir -p output/yihui/r-ninja && echo yihui r-ninja
     - stage: deploy
       script: 
         - echo deploy
+        - ls output/* -hl
 
 notifications:
   email: false
