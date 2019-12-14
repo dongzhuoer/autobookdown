@@ -5,17 +5,17 @@ git:
   submodules: false
 cache: 
   directories: [$HOME/_bookdown_files/, $HOME/site-library]
-env:
-  - user=yihui repo=bookdown-demo
-  - user=yihui repo=r-ninja
+
 jobs:
   include:
+    - stage: build                
+      name: yihui/bookdown-demo            
+      script: echo yihui bookdown-demo
+    - name: yihui/r-ninja            
+      script: echo yihui r-ninja
     - stage: deploy
       script: 
-        - ls -hl $HOME/_bookdown_files $HOME/library
-
-script:
-  - echo hello
+        - echo deploy
 
 notifications:
   email: false
