@@ -11,11 +11,14 @@ env:
 jobs:
   include:
     - stage: deploy
-      script: echo deploy
+      script: 
+        - ls -Rhl _bookdown_files library
 
 script:
   - mkdir -p _bookdown_files/$user/$repo
+  - touch _bookdown_files/$user/$repo/haha
   - mkdir -p library/$user/$repo
+  - touch library/$user/$repo/xixi
 
 notifications:
   email: false
