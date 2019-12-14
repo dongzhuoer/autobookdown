@@ -12,7 +12,7 @@ jobs:
       name: yihui/bookdown-demo            
       script: echo yihui bookdown-demo
     - name: yihui/r-ninja            
-      script: yihui r-ninja
+      script: echo yihui r-ninja
     - stage: deploy
       name: merge into gh-pages  
       script: 
