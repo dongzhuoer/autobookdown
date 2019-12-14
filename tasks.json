@@ -1,0 +1,32 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "type": "shell",
+    "problemMatcher": [],
+    "presentation": {
+        "reveal": "silent",
+    },
+    "tasks": [
+        {
+            "label": "build index.html",
+            "command": "pandoc index.md -s -o index.html",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "view index.html",
+            "command": "google-chrome index.html 2> /dev/null",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "view GitHub",
+            "command": "google-chrome https://github.com/dongzhuoer/${workspaceFolderBasename} 2> /dev/null",
+        },
+    ]
+}
