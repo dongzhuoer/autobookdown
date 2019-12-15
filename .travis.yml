@@ -9,7 +9,8 @@ cache:
 jobs:
   include:
     - stage: build                
-      name: yihui/bookdown-demo            
+      name: yihui/bookdown-demo
+      env: a=1            
       script: echo yihui bookdown-demo
     - name: yihui/r-ninja            
       script: echo yihui r-ninja
