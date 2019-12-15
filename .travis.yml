@@ -10,11 +10,10 @@ jobs:
   include:
     - stage: build                
       name: yihui/bookdown-demo
-      env: 
-        - a=1 b=2
-        - c=3 d=4
-      script: echo "$a $b $c $d" #bash script
+      env: repo=rstudio/bookdown-demo wd=. description=$repo url=https://bookdown.org/yihui/bookdown-demo
+      script: echo "$repo $wd $description" #bash script
     - name: yihui/r-ninja            
+    # apt="" command=""
       script: echo yihui r-ninja
     - stage: deploy
       name: merge into gh-pages  
