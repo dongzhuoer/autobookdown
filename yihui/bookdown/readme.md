@@ -6,6 +6,7 @@
 [Output](https://bookdown.dongzhuoer.com/yihui/bookdown)
 
 
+add `new_session: yes` in `_bookdown.yml`
 
 ## package dependency
 

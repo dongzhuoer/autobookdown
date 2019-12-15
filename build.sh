@@ -11,22 +11,17 @@
 # @param 6 website of original book
 
 
-
 # @note
 
 
-# create container
 docker run -dt --name rlang0 -v $HOME/.local/lib/R:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown 2> /dev/null
-docker exec rlang0 bash -c "apt update && apt install -y $pkgs"
-docker exec rlang0 rm -r /root
-docker exec rlang0 git clone --depth 1 $repo /root
-# copy _bookdown_files without warning
-docker exec rlang0 mkdir -p /root/_bookdown_files
-docker exec rlang0 rm -r /root/_bookdown_files
-docker cp _bookdown_files rlang0 /root
+docker exec rlang0 bash -c "apt update && apt install -y $apt"
+docker exec rlang0 git clone --depth 1 https://github.com/$user/$repo.git /root
+# mkdir _bookdown_files
+docker cp _bookdown_files rlang0:/root/$wd
 docker exec -w /root/$wd rlang0 bash -c "$command"
-# docker exec -w /root/$wd rlang0 Rscript -e "remotes::install_github('$dependency')"
-docker exec -w /root/$wd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('$url', '$custom_yaml'), output_dir = '/gitbook')"
+docker exec -w /root/$wd rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$user/$repo')"
+docker exec -w /root/$wd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('$url', '_'), output_dir = '/gitbook')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/gitbook')"
 docker exec rlang0 ls /gitbook
 wget https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md

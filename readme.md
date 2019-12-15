@@ -1,5 +1,10 @@
 # build my favorite programming books
 
+
+## to-do
+
+- what if `_bookdown_files` already exists
+
 ## Overview
 
 Each branch builds a book, it only contains some configuration files (mainly `.travis.yml`). 

@@ -10,7 +10,8 @@ jobs:
   include:
     - stage: build                
       name: yihui/bookdown-demo
-      env: repo=rstudio/bookdown-demo wd=. description=$repo url=https://bookdown.org/yihui/bookdown-demo
+      env: 
+        - user=rstudio repo=bookdown-demo wd=. description=$user/$repo url=https://bookdown.org/yihui/bookdown-demo
       script: echo "$repo $wd $description" #bash script
     - name: yihui/r-ninja            
     # apt="" command=""
