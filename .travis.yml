@@ -10,8 +10,8 @@ jobs:
   include:
     - stage: build                
       name: yihui/bookdown-demo
-      env: repo=https://github.com/rstudio/bookdown-demo.git wd=. pkgs="" command="" dependency="" custom_yaml="" url=https://bookdown.org/yihui/bookdown-demo
-      script: bash script
+      env: a=1 b=2 c=3
+      script: echo "$a $b $c" #bash script
     - name: yihui/r-ninja            
       script: echo yihui r-ninja
     - stage: deploy
