@@ -10,8 +10,10 @@ jobs:
   include:
     - stage: build                
       name: yihui/bookdown-demo
-      env: a=1 b=2 c=3
-      script: echo "$a $b $c" #bash script
+      env: 
+        - a=1 b=2
+        - c=3 d=4
+      script: echo "$a $b $c $d" #bash script
     - name: yihui/r-ninja            
       script: echo yihui r-ninja
     - stage: deploy
