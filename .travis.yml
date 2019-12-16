@@ -15,7 +15,7 @@ jobs:
       env: 
         - repo=rstudio/bookdown-demo wd=. url=https://bookdown.org/yihui/bookdown-demo
         - niche=rstudio/bookdown-demo apt="" command=""
-      script: bash build.sh
+      script: bash -x build.sh
     - name: yihui/r-ninja            
       script: echo yihui r-ninja
     - stage: deploy
