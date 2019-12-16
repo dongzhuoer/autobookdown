@@ -4,17 +4,19 @@ git:
   depth: false
   submodules: false
 cache: 
-  directories: [$HOME/_bookdown_files/, $HOME/site-library]
+  directories: [$TRAVIS_BUILD_DIR/_bookdown_files/, $HOME/site-library]
 
 jobs:
   include:
-    - stage: build                
+    # if a book is not in GitHub, such as fool/weird in GitLab
+    # then repo=dongzhuoer/gooddown wd=gitlab/fool/weird niche=gitlab-fool/weird                
+    - stage: build  
       name: yihui/bookdown-demo
       env: 
-        - user=rstudio repo=bookdown-demo wd=. description=$user/$repo url=https://bookdown.org/yihui/bookdown-demo
-      script: echo "$repo $wd $description" #bash script
+        - repo=rstudio/bookdown-demo wd=. url=https://bookdown.org/yihui/bookdown-demo
+        - niche=rstudio/bookdown-demo apt="" command=""
+      script: bash build.sh
     - name: yihui/r-ninja            
-    # apt="" command=""
       script: echo yihui r-ninja
     - stage: deploy
       name: merge into gh-pages  
@@ -49,6 +51,7 @@ notifications:
 #   - rm -rf $HOME/.output/*/*/{.git,*.md}
 # before_script: mkdir $HOME/.repo
 # script:
+#   - touch .nojekyll
 #   - pandoc index.md -s -o $HOME/.output/index.html
 #   - echo "bookdown.dongzhuoer.com" > $HOME/.output/CNAME
 #   - curl -o $HOME/.output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
