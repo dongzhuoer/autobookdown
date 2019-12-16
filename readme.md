@@ -3,6 +3,8 @@
 
 ## to-do
 
+- why `2> /dev/null` is ignroed
+- which docker version supports `-q` 
 - what if `_bookdown_files` already exists
 
 ## Overview
