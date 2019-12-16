@@ -20,7 +20,7 @@ docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = don
 docker exec rlang0 bash -c "apt update && apt install -y $apt"
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 docker exec rlang0 Rscript -e ".packages(T)"
-docker exec rlang0 Rscript -e ".libPaths(T)"
+docker exec rlang0 Rscript -e ".libPaths()"
 # build book
 docker exec -w /root/repo/$wd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('$root', '/root/_output.yml'), output_dir = '/root/gitbook')"
 # after script
