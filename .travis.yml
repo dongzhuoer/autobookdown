@@ -16,7 +16,7 @@ jobs:
     - name: hadley/r4ds
       env: repo=hadley/r4ds wd=. niche=$repo apt="" url=http://r4ds.had.co.nz
     - name: hadley/adv-r 
-      env: repo=hadley/adv-r wd=. niche=$repo apt="" url=https://adv-r.hadley.nz
+      env: repo=hadley/adv-r wd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
     - name: hadley/r-pkgs
       env: repo=hadley/adv-r wd=. niche=$repo apt="" url=https://r-pkgs.org
     - name: tidyverse/style

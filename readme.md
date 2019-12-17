@@ -20,16 +20,6 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
 
 
 
-mkdir -p hadley/adv-r
-mkdir -p hadley/r-pkgs
-mkdir -p hadley/r4ds
-mkdir -p hadley/style
-mkdir -p hadley/tidyeval
-mkdir -p yihui/blogdown
-mkdir -p yihui/bookdown
-mkdir -p yihui/bookdown-demo
-mkdir -p yihui/r-ninja
-mkdir -p yihui/rmarkdown
 
 
 ## add a new book

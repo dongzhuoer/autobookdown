@@ -9,6 +9,3 @@
 
 ## package dependency
 
-Actually, even if you don't install this package, yihui has written some code in `index.Rmd` to automatically install dependencies.
-
-Later I find that **formatR** needs to manually install.

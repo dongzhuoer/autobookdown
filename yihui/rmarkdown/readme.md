@@ -9,5 +9,5 @@
 
 ## package dependency
 
-Mainly copied from `knitr::write_bib()` in `20-references.Rmd`, plus my personal experience. So there may be some redundency, but anyway I just want that the book can be built, the exact dependency should be specified by the author.
+
 

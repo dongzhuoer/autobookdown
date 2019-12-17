@@ -10,5 +10,5 @@ add `new_session: yes` in `_bookdown.yml`
 
 ## package dependency
 
-I extract `setup` chunk of `index.Rmd` and search `@R-` for all cited R packages. So there may be some redundency, but anyway I just want that the book can be built, the exact dependency should be specified by the author.
+
 

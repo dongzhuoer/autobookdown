@@ -9,4 +9,4 @@
 
 ## package dependency
 
-I mainly search `@R-` for all cited R packages and search `::` for all mentioned packages. So there may be some redundency, but anyway I just want that the book can be built, the exact dependency should be specified by the author.
+
