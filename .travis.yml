@@ -5,23 +5,21 @@ git:
   submodules: false
 cache: 
   directories: [$TRAVIS_BUILD_DIR/_bookdown_files/, $HOME/site-library]
+env:
+    # if a book is not in GitHub, such as fool/weird in GitLab
+    # then repo=dongzhuoer/gooddown wd=gitlab/fool/weird niche=gitlab-fool/weird                
+  - repo=rstudio/bookdown-demo wd=. niche=$repo apt="" url=https://bookdown.org/yihui/bookdown-demo
+  - repo=hadley/r4ds wd=. niche=$repo apt="" url=https://adv-r.hadley.nz/
+
 
 jobs:
   include:
-    # if a book is not in GitHub, such as fool/weird in GitLab
-    # then repo=dongzhuoer/gooddown wd=gitlab/fool/weird niche=gitlab-fool/weird                
-    - stage: build  
-      name: yihui/bookdown-demo
-      env: 
-        - repo=rstudio/bookdown-demo wd=. url=https://bookdown.org/yihui/bookdown-demo
-        - niche=rstudio/bookdown-demo apt=""
-      script: bash -x build.sh
-    - name: yihui/r-ninja            
-      script: echo yihui r-ninja
     - stage: deploy
       name: merge into gh-pages  
       script: 
         - echo deploy
+
+script: bash -x build.sh
 
 notifications:
   email: false
