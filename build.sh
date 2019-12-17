@@ -8,7 +8,7 @@
 
     # docker rm -f rlang0
 # create container
-docker pull -q dongzhuoer/rlang:zhuoerdown
+docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
 docker run -dt --name rlang0 -v $HOME/.local/lib/R:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown
 # prepare files
 docker exec rlang0 git clone --depth 1 https://github.com/$repo.git /root/repo
