@@ -3,9 +3,12 @@
 
 ## to-do
 
-- why `2> /dev/null` is ignroed
-- which docker version supports `-q` 
 - what if `_bookdown_files` already exists
+- deploy
+- check first author is correct
+- thesis
+- nutshell
+- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 
 ## Overview
 
@@ -37,6 +40,20 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
    1. create an orphan branch with name `author-book`
    1. `git clone` in `.travis.yml`
    1. add a link in `index.md`
+
+
+# list
+
+- _Tidy evaluation_ by Hadley Wickham [code](https://github.com/tidyverse/tidyeval) [output](https://bookdown.dongzhuoer.com/hadley/tidyeval)
+- _The tidyverse style guide_ by Hadley Wickham [code](https://github.com/tidyverse/style) [output](https://bookdown.dongzhuoer.com/hadley/style)
+- _R for data science_ by Hadley Wickham [code](https://github.com/hadley/r4ds) [output](https://bookdown.dongzhuoer.com/hadley/r4ds)
+- _R packages_ by Hadley Wickham [code](https://github.com/hadley/r-pkgs) [output](https://bookdown.dongzhuoer.com/hadley/r-pkgs)
+- _Advanced R programming_ by Hadley Wickham [code](https://github.com/hadley/adv-r) [output](https://bookdown.dongzhuoer.com/hadley/adv-r)
+- _R Markdown: The Definitive Guide_ by Yihui Xie [code](https://github.com/rstudio/rmarkdown-book) [output](https://bookdown.dongzhuoer.com/yihui/rmarkdown)
+- 《R语言忍者秘笈》by 谢益辉 [code](https://github.com/yihui/r-ninja) [output](https://bookdown.dongzhuoer.com/yihui/r-ninja)
+- _A minimal book example using bookdown_ by Yihui Xie [code](https://github.com/rstudio/bookdown-demo) [output](https://bookdown.dongzhuoer.com/yihui/bookdown-demo)
+- _bookdown: Authoring Books and Technical Documents with R Markdown_ by Yihui Xie [code](https://github.com/rstudio/bookdown/tree/master/inst/examples) [output](https://bookdown.dongzhuoer.com/yihui/bookdown)
+- _blogdown: Creating Websites with R Markdown_ by Yihui Xie [code](https://github.com/rstudio/blogdown/tree/master/docs) [output](https://bookdown.dongzhuoer.com/yihui/blogdown)
 
 
 
