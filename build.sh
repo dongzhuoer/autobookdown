@@ -17,7 +17,7 @@ docker cp _bookdown_files rlang0:/root/repo/$wd
 docker cp _output/$niche.yml rlang0:/root/_output.yml
 # dependency
 docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
-docker exec rlang0 bash -c "apt update && apt install -y $apt"
+docker exec rlang0 bash -c "apt update -qq && apt install -y -qq -o Dpkg::Use-Pty=0 $apt"
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 docker exec rlang0 Rscript -e ".packages(T)"
 docker exec rlang0 Rscript -e ".libPaths()"
