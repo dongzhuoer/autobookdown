@@ -4,7 +4,6 @@
 ## to-do
 
 - hadley 3 & rmarkdown fails
-- 
 - what if `_bookdown_files` already exists
 - deploy
 - check first author is correct
