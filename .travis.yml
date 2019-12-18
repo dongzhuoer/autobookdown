@@ -18,7 +18,7 @@ jobs:
     - name: hadley/adv-r 
       env: repo=hadley/adv-r wd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
     - name: hadley/r-pkgs
-      env: repo=hadley/adv-r wd=. niche=$repo apt="" url=https://r-pkgs.org
+      env: repo=hadley/r-pkgs wd=. niche=$repo apt="" url=https://r-pkgs.org
     - name: tidyverse/style
       env: repo=tidyverse/style wd=. niche=$repo apt="" url=http://style.tidyverse.org
     - name: tidyverse/tidyeval
