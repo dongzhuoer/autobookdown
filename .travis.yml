@@ -35,19 +35,8 @@ jobs:
       name: merge into gh-pages  
       script: 
         - echo deploy
-
-script: bash -x build.sh
-
-notifications:
-  email: false
-
-
-# addons:
-#   apt:
-#     packages: pandoc
-# env:
-#   global: 
-#     - repo_git="-b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git"
+        - docker exec ubuntu0 "apt install pandoc"
+        - docker exec ubuntu0 git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /root/repo
 
 # before_install: mkdir -p $HOME/.output/{hadley,yihui,zhuoer}
 # install:
@@ -72,4 +61,12 @@ notifications:
 #   - curl -o $HOME/.output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 #   - git clone --depth 1 $repo_git $HOME/.repo && mv $HOME/.repo/.git $HOME/.output
 #   - cd $HOME/.output && git add --all && git commit -m "travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push -f
+
+
+script: bash -x build.sh
+
+notifications:
+  email: false
+
+
 

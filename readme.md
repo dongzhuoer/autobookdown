@@ -3,9 +3,10 @@
 
 ## to-do
 
+- `/root/wd/$rmd`
 - hadley 3 & rmarkdown fails
 - what if `_bookdown_files` already exists
-- deploy
+- deploy, `/root/wd`, `/root/git`
 - check first author is correct
 - thesis
 - nutshell
