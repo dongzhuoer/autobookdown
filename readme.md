@@ -7,7 +7,6 @@
 - what if `_bookdown_files` already exists
 - deploy
 - check first author is correct
-- cache docker image
 - thesis
 - nutshell
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
