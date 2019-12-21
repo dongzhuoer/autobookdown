@@ -1,6 +1,6 @@
 #!/bin/bash
 # build gitbook in Docker
-# @param repo, user/repo in GitHub, such as rstudio/bookdown-demo
+# @param repo, user/wd in GitHub, such as rstudio/bookdown-demo
 # @param wd, directory containing .Rmd files
 # @param url, website of original book
 # @param niche, ecological space including installr, dongzhuoer.bookdown.com, _output/*yml
@@ -12,9 +12,10 @@ docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
 docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown
 
 # prepare files
-docker exec rlang0 git clone --depth 1 https://github.com/$repo.git /root/repo
+mkdir -p wd
+git clone --depth 1 https://github.com/$repo.git 
     # mkdir -p _bookdown_files
-docker cp _bookdown_files rlang0:/root/repo/$rmd 
+docker cp _bookdown_files rlang0:/root/wd/$rmd 
 docker cp _output/$niche.yml rlang0:/root/_output.yml
 
 # dependency
@@ -24,10 +25,11 @@ docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github
 
 # build book
 download_link = "https://github.com/dongzhuoer/bookdown.dongzhuoer.com/archive/$niche.zip"
-docker exec -w /root/repo/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('/root/_output.yml', '$url', '$download_link'), output_dir = '/root/output')"
+docker exec -w /root/wd/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('/root/_output.yml', '$url', '$download_link'), output_dir = '/root/output')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/root/output')"
 docker exec rlang0 bash -c "apt install -y wget"
 docker exec rlang0 wget -O /root/output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
+test -f "no-exist" || exit 1
 
 # deploy
 docker exec rlang0 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /root/git
@@ -38,4 +40,4 @@ docker exec -w /root/output rlang0 git push -f
 
 # before cache
 docker exec rlang0 chown -R `id -u`:`id -g` /usr/local/lib/R/site-library
-rm -r _bookdown_files && docker cp rlang0:/root/repo/$rmd/_bookdown_files . 
+rm -r _bookdown_files && docker cp rlang0:/root/wd/$rmd/_bookdown_files . 
