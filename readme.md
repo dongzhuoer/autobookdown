@@ -1,4 +1,5 @@
 # build my favorite programming books
+[![Build Status](https://travis-ci.com/dongzhuoer/autobookdown.svg?branch=master)](https://travis-ci.com/dongzhuoer/autobookdown)
 
 
 

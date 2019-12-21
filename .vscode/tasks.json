@@ -9,23 +9,19 @@
     "tasks": [
         {
             "label": "build index.html",
-            "command": "pandoc index.md -s -o ~/gitdisk/index.html",
+            "command": "pandoc index.md -s -o ~/gitdisk/bookdown.dongzhuoer.com/index.html",
             "group": {
                 "kind": "build",
                 "isDefault": true,
             },
         },
         {
-            "label": "view index.html",
-            "command": "google-chrome index.html 2> /dev/null",
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-        },
-        {
             "label": "view GitHub",
             "command": "google-chrome https://github.com/dongzhuoer/${workspaceFolderBasename} 2> /dev/null",
+            "group": {
+                "kind": "test",
+                "isDefault": true,
+            },
         },
     ]
 }
