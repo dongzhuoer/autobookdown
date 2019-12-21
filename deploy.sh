@@ -17,7 +17,7 @@ rm -rf wd/*/*/.git
 # auxiliary files
 touch wd/.nojekyll
 echo bookdown.dongzhuoer.com > wd/CNAME
-sudo apt update && sudo apt install -y pandoc && pandoc index.md -s -o index.html
+sudo apt update && sudo apt install -y pandoc && pandoc index.md -s -o wd/index.html
 wget -O wd/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 
 # push to gh-pages

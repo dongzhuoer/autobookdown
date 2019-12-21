@@ -16,17 +16,18 @@ td:first-child {
 
 [online version](https://bookdown.dongzhuoer.com/), [GitHub repo](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)
 
-|                                 |                                                         |
-|---------------------------------|---------------------------------------------------------|
-| [r-pkgs](hadley/r-pkgs) | R packages, 2nd                                         |
-| [r4ds](hadley/r4ds)             | R for Data Science                                      |
-| [adv-r](hadley/adv-r)           | Advanced R                                              |
-| [style](hadley/style)           | The tidyverse style guide                               |
-| [tidyeval](hadley/tidyeval)     | Tidy evaluation                                         |
-| [r-ninja](yihui/r-ninja)        | R 语言忍者秘笈                                                |
-| [rmarkdown](yihui/rmarkdown)    | R Markdown: The Definitive Guide                        |
-| [bookdown](yihui/bookdown)      | Authoring Books and Technical Documents with R Markdown |
-| [blogdown](yihui/blogdown)      | Creating Websites with R Markdown                       |
+|                              |                                                         |
+|------------------------------|---------------------------------------------------------|
+| [bookdown-demo](yihui/bookdown-demo)   | Authoring Books and Technical Documents with R Markdown |
+| [r4ds](hadley/r4ds)          | R for Data Science                                      |
+| [adv-r](hadley/adv-r)        | Advanced R                                              |
+| [r-pkgs](hadley/r-pkgs)      | R packages, 2nd                                         |
+| [style](hadley/style)        | The tidyverse style guide                               |
+| [rmarkdown](yihui/rmarkdown) | R Markdown: The Definitive Guide                        |
+| [bookdown](yihui/bookdown)   | Authoring Books and Technical Documents with R Markdown |
+| [blogdown](yihui/blogdown)   | Creating Websites with R Markdown                       |
+| [tidyeval](hadley/tidyeval)  | Tidy evaluation                                         |
+| [r-ninja](yihui/r-ninja)     | R 语言忍者秘笈                                                |
 
 -----------------
 
