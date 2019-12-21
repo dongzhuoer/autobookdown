@@ -14,8 +14,6 @@ I establish this website mainly for two purposes:
 
 ## to-do
 
-- whether `test -f wd/output/index.html` takes effect
-- check first author is correct
 - r4ds `split_by: section+number`
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 - thesis
@@ -34,18 +32,18 @@ I establish this website mainly for two purposes:
 
 ## book list
 
-| book                                                                             | code                                                                              |
-|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| _A minimal book example using bookdown_ by Yihui Xie                             | [rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo)                 |
-| _R for data science_ by Hadley Wickham                                           | [hadley/r4ds](https://github.com/hadley/r4ds)                                     |
-| _Advanced R programming_ by Hadley Wickham                                       | [hadley/adv-r](https://github.com/hadley/adv-r)                                   |
-| _R packages_ by Hadley Wickham                                                   | [hadley/r-pkgs](https://github.com/hadley/r-pkgs)                                 |
-| _R Markdown: The Definitive Guide_ by Yihui Xie                                  | [rstudio/rmarkdown-book](https://github.com/rstudio/rmarkdown-book)               |
-| _bookdown: Authoring Books and Technical Documents with R Markdown_ by Yihui Xie | [rstudio/bookdown](https://github.com/rstudio/bookdown/tree/master/inst/examples) |
-| _blogdown: Creating Websites with R Markdown_ by Yihui Xie                       | [rstudio/blogdown](https://github.com/rstudio/blogdown/tree/master/docs)          |
-| _Tidy evaluation_ by Hadley Wickham                                              | [tidyverse/tidyeval](https://github.com/tidyverse/tidyeval)                       |
-| _The tidyverse style guide_ by Hadley Wickham                                    | [tidyverse/style](https://github.com/tidyverse/style)                             |
-| 《R语言忍者秘笈》by 谢益辉                                                                  | [yihui/r-ninja](https://github.com/yihui/r-ninja)                                 |
+| Title                                                               | Author         | Code                                                                              |
+|---------------------------------------------------------------------|----------------|-----------------------------------------------------------------------------------|
+| _A Minimal Book Example_                                            | Yihui Xie      | [rstudio/bookdown-demo](https://github.com/rstudio/bookdown-demo)                 |
+| _R for data science_                                                | Hadley Wickham | [hadley/r4ds](https://github.com/hadley/r4ds)                                     |
+| _Advanced R_                                                        | Hadley Wickham | [hadley/adv-r](https://github.com/hadley/adv-r)                                   |
+| _R packages_                                                        | Hadley Wickham | [hadley/r-pkgs](https://github.com/hadley/r-pkgs)                                 |
+| _R Markdown: The Definitive Guide_                                  | Yihui Xie      | [rstudio/rmarkdown-book](https://github.com/rstudio/rmarkdown-book)               |
+| _bookdown: Authoring Books and Technical Documents with R Markdown_ | Yihui Xie      | [rstudio/bookdown](https://github.com/rstudio/bookdown/tree/master/inst/examples) |
+| _blogdown: Creating Websites with R Markdown_                       | Yihui Xie      | [rstudio/blogdown](https://github.com/rstudio/blogdown/tree/master/docs)          |
+| _Tidy evaluation_                                                   | Hadley Wickham | [tidyverse/tidyeval](https://github.com/tidyverse/tidyeval)                       |
+| _The tidyverse style guide_                                         | Hadley Wickham | [tidyverse/style](https://github.com/tidyverse/style)                             |
+| R语言忍者秘笈                                                             | 谢益辉            | [yihui/r-ninja](https://github.com/yihui/r-ninja)                                 |
 
 
 
@@ -54,7 +52,6 @@ I establish this website mainly for two purposes:
 `.git/info/exclude`
 ```
 _bookdown_files
-repo
 ```
 
 

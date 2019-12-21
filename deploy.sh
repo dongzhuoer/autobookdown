@@ -6,7 +6,7 @@ docker pull dongzhuoer/ubuntu-cn > /dev/null
     # docker rm -f ubuntu0
 docker run -dt --name ubuntu0 -w /root dongzhuoer/ubuntu-cn
 docker exec ubuntu0 rm .bashrc .profile
-docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > .gitconfig'
+docker exec ubuntu0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > .gitconfig'
 docker exec ubuntu0 bash -c "apt update && apt install -y git wget pandoc"
 
 # fetch gitbook
