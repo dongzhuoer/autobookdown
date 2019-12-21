@@ -6,7 +6,7 @@ docker pull dongzhuoer/ubuntu-cn > /dev/null
     # docker rm -f ubuntu0
 docker run -dt --name ubuntu0 -w /root dongzhuoer/ubuntu-cn
 docker exec ubuntu0 rm .bashrc .profile
-docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
+docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > .gitconfig'
 docker exec ubuntu0 bash -c "apt update && apt install -y git wget pandoc"
 
 # fetch gitbook
@@ -25,7 +25,7 @@ docker exec ubuntu0 bash -c "rm -rf */*/.git"
 
 # auxiliary files
 docker exec ubuntu0 touch .nojekyll
-docker exec ubuntu0 echo bookdown.dongzhuoer.com > wd/CNAME
+docker exec ubuntu0 echo bookdown.dongzhuoer.com > CNAME
 docker cp index.md ubuntu0:/root && docker exec ubuntu0 pandoc index.md -s -o index.html
 docker exec ubuntu0 wget -O readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 
