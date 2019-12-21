@@ -9,64 +9,49 @@ cache:
 jobs:
   include:
     # if a book is not in GitHub, such as fool/weird in GitLab
-    # then repo=dongzhuoer/gooddown wd=gitlab/fool/weird niche=gitlab-fool/weird                
+    # then repo=dongzhuoer/gooddown rmd=gitlab/fool/weird niche=gitlab-fool/weird                
     - stage: build  
       name: rstudio/bookdown-demo
-      env: repo=rstudio/bookdown-demo wd=. niche=$repo apt="" url=https://bookdown.org/yihui/bookdown-demo
+      env: repo=rstudio/bookdown-demo rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/bookdown-demo
     - name: hadley/r4ds
-      env: repo=hadley/r4ds wd=. niche=$repo apt="" url=http://r4ds.had.co.nz
+      env: repo=hadley/r4ds rmd=. niche=$repo apt="" url=http://r4ds.had.co.nz
     - name: hadley/adv-r 
-      env: repo=hadley/adv-r wd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
+      env: repo=hadley/adv-r rmd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
     - name: hadley/r-pkgs
-      env: repo=hadley/r-pkgs wd=. niche=$repo apt="" url=https://r-pkgs.org
-    - name: tidyverse/style
-      env: repo=tidyverse/style wd=. niche=$repo apt="" url=http://style.tidyverse.org
-    - name: tidyverse/tidyeval
-      env: repo=tidyverse/tidyeval wd=. niche=$repo apt="" url=https://tidyeval.tidyverse.org
-    - name: yihui/r-ninja
-      env: repo=yihui/r-ninja wd=. niche=$repo apt="" url=https://bookdown.org/yihui/r-ninja 
+      env: repo=hadley/r-pkgs rmd=. niche=$repo apt="" url=https://r-pkgs.org
     - name: rstudio/rmarkdown-book
-      env: repo=rstudio/rmarkdown-book wd=. niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/rmarkdown 
+      env: repo=rstudio/rmarkdown-book rmd=. niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/rmarkdown 
     - name: rstudio/bookdown
-      env: repo=rstudio/bookdown wd=inst/examples niche=$repo apt="libcairo2-dev texlive-latex-base" url=https://bookdown.org/yihui/bookdown 
+      env: repo=rstudio/bookdown rmd=inst/examples niche=$repo apt="libcairo2-dev texlive-latex-base" url=https://bookdown.org/yihui/bookdown 
     - name: rstudio/blogdown
-      env: repo=rstudio/blogdown wd=docs niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/blogdown 
+      env: repo=rstudio/blogdown rmd=docs niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/blogdown 
+    - name: tidyverse/style
+      env: repo=tidyverse/style rmd=. niche=$repo apt="" url=http://style.tidyverse.org
+    - name: tidyverse/tidyeval
+      env: repo=tidyverse/tidyeval rmd=. niche=$repo apt="" url=https://tidyeval.tidyverse.org
+    - name: yihui/r-ninja
+      env: repo=yihui/r-ninja rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/r-ninja 
     - stage: deploy
       name: merge into gh-pages  
       script: 
-        - echo deploy
-        - docker exec ubuntu0 "apt install pandoc"
-        - docker exec ubuntu0 git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /root/repo
-
-# before_install: mkdir -p $HOME/.output/{hadley,yihui,zhuoer}
-# install:
-#   - git clone --depth 1 -b hadley-r4ds           https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/hadley/r4ds
-#   - git clone --depth 1 -b hadley-adv-r          https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/hadley/adv-r
-#   - git clone --depth 1 -b hadley-r-pkgs         https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/hadley/r-pkgs
-#   - git clone --depth 1 -b hadley-style          https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/hadley/style
-#   - git clone --depth 1 -b hadley-tidyeval       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/hadley/tidyeval
-#   - git clone --depth 1 -b yihui-bookdown-demo   https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/yihui/bookdown-demo     
-#   - git clone --depth 1 -b yihui-bookdown        https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/yihui/bookdown     
-#   - git clone --depth 1 -b yihui-blogdown        https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/yihui/blogdown     
-#   - git clone --depth 1 -b yihui-rmarkdown       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/yihui/rmarkdown     
-#   - git clone --depth 1 -b yihui-r-ninja         https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/yihui/r-ninja     
-#   - git clone --depth 1 -b zhuoer-nutshell       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/zhuoer/nutshell
-#   - git clone --depth 1 -b zhuoer-thesis         https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git $HOME/.output/zhuoer/thesis
-#   - rm -rf $HOME/.output/*/*/{.git,*.md}
-# before_script: mkdir $HOME/.repo
-# script:
-#   - touch .nojekyll
-#   - pandoc index.md -s -o $HOME/.output/index.html
-#   - echo "bookdown.dongzhuoer.com" > $HOME/.output/CNAME
-#   - curl -o $HOME/.output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
-#   - git clone --depth 1 $repo_git $HOME/.repo && mv $HOME/.repo/.git $HOME/.output
-#   - cd $HOME/.output && git add --all && git commit -m "travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push -f
-
-
-script: bash -x build.sh
+        - mkdir -p wd/{hadley,tidyverse,yihui,zhuoer}
+        - git clone --depth 1 -b rstudio/bookdown-demo  https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/rstudio/bookdown-demo
+        - git clone --depth 1 -b hadley/r4ds            https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/hadley/r4ds
+        - git clone --depth 1 -b hadley/adv-r           https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/hadley/adv-r
+        - git clone --depth 1 -b hadley/r-pkgs          https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/hadley/r-pkgs
+        - git clone --depth 1 -b rstudio/rmarkdown-book https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/rstudio/rmarkdown-book
+        - git clone --depth 1 -b rstudio/bookdown       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/rstudio/bookdown  
+        - git clone --depth 1 -b rstudio/blogdown       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/rstudio/blogdown
+        - git clone --depth 1 -b tidyverse/style        https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/tidyverse/style
+        - git clone --depth 1 -b tidyverse/tidyeval     https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/tidyverse/tidyeval
+        - git clone --depth 1 -b yihui/r-ninja          https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/yihui/r-ninja
+        - rm -rf wd/*/*/.git
+        - touch wd/.nojekyll
+        - echo bookdown.dongzhuoer.com > wd/CNAME
+        - cp index.html wd
+        - wget -O wd/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
+        - git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git repo && mv repo/.git wd
+        - cd wd && git add --all && git commit -m "Travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push -f && cd ..
 
 notifications:
   email: false
-
-
-

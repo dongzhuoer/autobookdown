@@ -3,10 +3,9 @@
 
 ## to-do
 
-- `/root/wd/$rmd`
+- mirror -v index.html here
 - hadley 3 & rmarkdown fails
 - what if `_bookdown_files` already exists
-- deploy, `/root/wd`, `/root/git`
 - check first author is correct
 - thesis
 - nutshell
@@ -46,16 +45,18 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
 
 # list
 
-- _Tidy evaluation_ by Hadley Wickham [code](https://github.com/tidyverse/tidyeval) [output](https://bookdown.dongzhuoer.com/hadley/tidyeval)
-- _The tidyverse style guide_ by Hadley Wickham [code](https://github.com/tidyverse/style) [output](https://bookdown.dongzhuoer.com/hadley/style)
-- _R for data science_ by Hadley Wickham [code](https://github.com/hadley/r4ds) [output](https://bookdown.dongzhuoer.com/hadley/r4ds)
-- _R packages_ by Hadley Wickham [code](https://github.com/hadley/r-pkgs) [output](https://bookdown.dongzhuoer.com/hadley/r-pkgs)
-- _Advanced R programming_ by Hadley Wickham [code](https://github.com/hadley/adv-r) [output](https://bookdown.dongzhuoer.com/hadley/adv-r)
-- _R Markdown: The Definitive Guide_ by Yihui Xie [code](https://github.com/rstudio/rmarkdown-book) [output](https://bookdown.dongzhuoer.com/yihui/rmarkdown)
-- 《R语言忍者秘笈》by 谢益辉 [code](https://github.com/yihui/r-ninja) [output](https://bookdown.dongzhuoer.com/yihui/r-ninja)
-- _A minimal book example using bookdown_ by Yihui Xie [code](https://github.com/rstudio/bookdown-demo) [output](https://bookdown.dongzhuoer.com/yihui/bookdown-demo)
-- _bookdown: Authoring Books and Technical Documents with R Markdown_ by Yihui Xie [code](https://github.com/rstudio/bookdown/tree/master/inst/examples) [output](https://bookdown.dongzhuoer.com/yihui/bookdown)
-- _blogdown: Creating Websites with R Markdown_ by Yihui Xie [code](https://github.com/rstudio/blogdown/tree/master/docs) [output](https://bookdown.dongzhuoer.com/yihui/blogdown)
+| a                                                                                | b                                                                     | c                                                             |
+|----------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------|
+| _Tidy evaluation_ by Hadley Wickham                                              | [code](https://github.com/tidyverse/tidyeval)                         | [output](https://bookdown.dongzhuoer.com/tidyverse/tidyeval)  |
+| _The tidyverse style guide_ by Hadley Wickham                                    | [code](https://github.com/tidyverse/style)                            | [output](https://bookdown.dongzhuoer.com/tidyverse/style)     |
+| _R for data science_ by Hadley Wickham                                           | [code](https://github.com/hadley/r4ds)                                | [output](https://bookdown.dongzhuoer.com/hadley/r4ds)         |
+| _R packages_ by Hadley Wickham                                                   | [code](https://github.com/hadley/r-pkgs)                              | [output](https://bookdown.dongzhuoer.com/hadley/r-pkgs)       |
+| _Advanced R programming_ by Hadley Wickham                                       | [code](https://github.com/hadley/adv-r)                               | [output](https://bookdown.dongzhuoer.com/hadley/adv-r)        |
+| _R Markdown: The Definitive Guide_ by Yihui Xie                                  | [code](https://github.com/rstudio/rmarkdown-book)                     | [output](https://bookdown.dongzhuoer.com/rstudio/rmarkdown)   |
+| 《R语言忍者秘笈》by 谢益辉                                                                  | [code](https://github.com/yihui/r-ninja)                              | [output](https://bookdown.dongzhuoer.com/yihui/r-ninja)       |
+| _A minimal book example using bookdown_ by Yihui Xie                             | [code](https://github.com/rstudio/bookdown-demo)                      | [output](https://bookdown.dongzhuoer.com/yihui/bookdown-demo) |
+| _bookdown: Authoring Books and Technical Documents with R Markdown_ by Yihui Xie | [code](https://github.com/rstudio/bookdown/tree/master/inst/examples) | [output](https://bookdown.dongzhuoer.com/rstudio/bookdown)    |
+| _blogdown: Creating Websites with R Markdown_ by Yihui Xie                       | [code](https://github.com/rstudio/blogdown/tree/master/docs)          | [output](https://bookdown.dongzhuoer.com/rstudio/blogdown)    |
 
 
 
