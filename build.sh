@@ -34,4 +34,4 @@ git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown
 cd wd/output && git add --all && commit -m "Travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push && cd ../..
 
 # before cache
-docker exec rlang0 chown -R `id -u`:`id -g` _bookdown_files /usr/local/lib/R/site-library
+docker exec rlang0 chown -R `id -u`:`id -g` repo/_bookdown_files /usr/local/lib/R/site-library
