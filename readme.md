@@ -1,14 +1,6 @@
 # build my favorite programming books
 
 
-## to-do
-
-- mirror -v index.html here
-- check first author is correct
-- what if `_bookdown_files` already exists
-- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
-- thesis
-- nutshell
 
 ## Overview
 
@@ -22,27 +14,7 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
 
 
 
-
-
-
-## add a new book
-
-1. check whether the book can be built
-   1. clone source code repo 
-   1. build on local
-   1. build in `dongzhuoer/rlang:zhuoerdown` Docker image
-
-1. add the book to this repo 
-   1. create an orphan branch with name `author-book`
-   1. set up `.travis.yml`
-
-1. add the book to `bookdown.dongzhuoer.com` repo
-   1. create an orphan branch with name `author-book`
-   1. `git clone` in `.travis.yml`
-   1. add a link in `index.md`
-
-
-# list
+# book list
 
 | book                                                                             | code                                                                  | output                                                             |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------|
@@ -58,13 +30,34 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
 | 《R语言忍者秘笈》by 谢益辉                                                                  | [code](https://github.com/yihui/r-ninja)                              | [output](https://bookdown.dongzhuoer.com/yihui/r-ninja)       |
 
 
+
 # for developers
+
+## to-do
+
+- check first author is correct
+- what if `_bookdown_files` already exists
+- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
+- thesis
+- nutshell
+
+## add a new book
+
+- build the book in local, resolve APT & R package dependency
+- think out a good name (`niche`), such as `rstudio/bookdown-demo`
+- create `niche` branch on GitHub, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr), link in `index.md`
+- Travis add new job in `build` stage and clone in `deploy.sh`  
+
+## reinitialize
 
 `.git/info/exclude`
 ```
 _bookdown_files
 repo
 ```
+
+
+
 
 -----------------------
 
