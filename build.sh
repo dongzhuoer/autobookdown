@@ -30,7 +30,7 @@ docker exec rlang0 wget -O /root/output/readme.md https://gist.githubusercontent
 test -f wd/output/index.html || exit 1
 
 # before cache
-docker exec rlang0 chown -R `id -u`:`id -g` . /usr/local/lib/R/site-library
+docker exec rlang0 chown -R `id -u`:`id -g` /root /usr/local/lib/R/site-library
 
 # deploy
 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/git && mv wd/git/.git wd/output && rm -r wd/git
