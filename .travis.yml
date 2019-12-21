@@ -9,7 +9,10 @@ script: bash -x build.sh
 notifications:
   email: false
 stages:
+  - name: build
+    if: false
   - deploy
+
 
 jobs:
   include:
