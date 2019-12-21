@@ -23,6 +23,7 @@ docker exec rlang0 bash -c "apt update && apt install -y $apt"
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 
 # build book
+download_link = "https://github.com/dongzhuoer/bookdown.dongzhuoer.com/archive/$niche.zip"
 docker exec -w /root/repo/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('$root', '/root/_output.yml', '$url'), output_dir = '/root/output')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/root/output')"
 docker exec rlang0 bash -c "apt install -y wget"
