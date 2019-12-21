@@ -5,13 +5,11 @@
 
 ## Overview
 
-Each branch builds a book, it only contains some configuration files (mainly `.travis.yml`). 
+I establish this website mainly for two purpose:
 
-The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)) is to 
+- customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown), mainly use yellow color to protect eye and expand TOC
+- store source code in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com) to facilitate offiline reading
 
-1. download Rmd source code
-1. render to GitBook output
-1. deploy to [dongzhuoer/bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)
 
 
 
@@ -63,3 +61,50 @@ repo
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc/3.0/)  
 This work is licensed under a [Creative Commons Attribution-NonCommercial 3.0 Unported License](http://creativecommons.org/licenses/by-nc/3.0/)
+
+
+
+The website of my writing and favorite programming books.
+
+two purpose (powered by [build-bookdown](https://github.com/dongzhuoer/build-bookdown)).
+
+1. Use GitHub pages to host the website
+1. Download a book as `.zip` for _offline_ reading, since each book lives in its own branch
+
+
+# Implementation
+
+- `gh-pages` branch contains whole website, other branches contain individual books.
+- `master` branch runs Travis CI,
+  1. fetch book contents from individual branches
+  1. build `index.html`, create `CNAME` and fetch CC 4.0 `readme.md`
+  1. deploy to `gh-pages` branch
+
+# to-do
+
+1. pass `- env` as shell parameter
+1. use separate directory for each book's cache
+
+# new book
+
+- https://github.com/cpsievert/plotly_book
+- https://github.com/csgillespie/efficientR
+- https://github.com/hadley/mastering-shiny
+- https://github.com/wch/rgcookbook
+- https://github.com/tidyverse/design
+- https://github.com/hadley/ggplot2-book
+- https://github.com/hadley/r-pkgs
+
+
+```r
+remotes::install_github("dongzhuoer/installr/hadley/r-pkgs", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/csgillespie/efficientR", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/hadley/mastering-shiny", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/wch/rgcookbook", upgrade = TRUE) # libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libjq-dev
+remotes::install_github("dongzhuoer/installr/tidyverse/design", upgrade = TRUE) 
+remotes::install_github("dongzhuoer/installr/hadley/ggplot2-book", upgrade = TRUE) # remotes::install_github("ropensci/USAboundariesData")
+```
+
+- https://topepo.github.io/caret/index.html
+
