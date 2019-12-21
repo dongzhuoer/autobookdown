@@ -15,7 +15,6 @@ I establish this website mainly for two purposes:
 ## to-do
 
 - check first author is correct
-- what if `_bookdown_files` already exists
 - r4ds `split_by: section+number`
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 - thesis
