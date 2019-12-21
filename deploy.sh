@@ -21,6 +21,5 @@ sudo apt update && sudo apt install -y pandoc && pandoc index.md -s -o wd/index.
 wget -O wd/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 
 # push to gh-pages
-git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/git
-mv wd/git/.git wd && rm -r git
+git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git git && git/.git wd && rm -r git
 cd wd && git add --all && git commit -m "Travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push && cd ..
