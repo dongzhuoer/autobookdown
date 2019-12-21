@@ -11,7 +11,6 @@
 docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
     # docker rm -f rlang0
 docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown
-docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
 
 # prepare files
 docker exec rlang0 rm -r /root
@@ -20,6 +19,7 @@ docker cp _output/$niche.yml rlang0:/_output.yml
 docker cp _bookdown_files rlang0:/root
 
 # dependency
+docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
 docker exec rlang0 bash -c "apt update && apt install -y $apt"
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 
@@ -29,7 +29,7 @@ docker exec -w /root/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdow
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/output')"
 docker exec rlang0 bash -c "apt install -y wget"
 docker exec rlang0 wget -O /output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
-docker exec rlang0 test -f /output/index.html
+docker exec rlang0 test -f /output/index.html || exit 0
 
 # deploy
 docker exec rlang0 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /git 
