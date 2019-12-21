@@ -11,6 +11,7 @@
 docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
     # docker rm -f rlang0
 docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown
+docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
 
 # prepare files
 docker exec rlang0 rm -r /root
@@ -19,7 +20,6 @@ docker cp _output/$niche.yml rlang0:/_output.yml
 docker cp _bookdown_files rlang0:/root
 
 # dependency
-docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
 docker exec rlang0 bash -c "apt update && apt install -y $apt"
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 
