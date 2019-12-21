@@ -16,28 +16,19 @@ td:first-child {
 
 [online version](https://bookdown.dongzhuoer.com/), [GitHub repo](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)
 
-|                              |                                                         |
-|------------------------------|---------------------------------------------------------|
-| [bookdown-demo](yihui/bookdown-demo)   | Authoring Books and Technical Documents with R Markdown |
-| [r4ds](hadley/r4ds)          | R for Data Science                                      |
-| [adv-r](hadley/adv-r)        | Advanced R                                              |
-| [r-pkgs](hadley/r-pkgs)      | R packages, 2nd                                         |
-| [style](hadley/style)        | The tidyverse style guide                               |
-| [rmarkdown](yihui/rmarkdown) | R Markdown: The Definitive Guide                        |
-| [bookdown](yihui/bookdown)   | Authoring Books and Technical Documents with R Markdown |
-| [blogdown](yihui/blogdown)   | Creating Websites with R Markdown                       |
-| [tidyeval](hadley/tidyeval)  | Tidy evaluation                                         |
-| [r-ninja](yihui/r-ninja)     | R 语言忍者秘笈                                                |
-
------------------
-
-|                             |                                                                           |
-|-----------------------------|---------------------------------------------------------------------------|
-| [nutshell](zhuoer/nutshell) | Program in a Nutshell                                                     |
-| [thesis](zhuoer/thesis)     | Undergraduate Thesis                                                      |
-| [foobar](foobar)            | A very very very long long long title is really really really embarassing |
-
-------------------
+- [Yihui Xie's A Minimal Book Example](rstudio/bookdown-demo)
+- [R for Data Science](hadley/r4ds)
+- [Advanced R](hadley/adv-r)
+- [R packages, 2nd](hadley/r-pkgs)
+- [The tidyverse style guide](tidyverse/style)
+- [Yihui Xie's R Markdown: The Definitive Guide](rstudio/rmarkdown-book)
+- [Yihui Xie's Authoring Books and Technical Documents with R Markdown](rstudio/bookdown)
+- [Yihui Xie's Creating Websites with R Markdown](rstudio/blogdown)
+- [Tidy evaluation](tidyverse/tidyeval)
+- [R 语言忍者秘笈](yihui/r-ninja)
+- [Zhuoer Dong's Program in a Nutshell](dongzhuoer/nutshell)
+- [Zhuoer Dong's Undergraduate Thesis](dongzhuoer/thesis)
+- 
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
 This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).

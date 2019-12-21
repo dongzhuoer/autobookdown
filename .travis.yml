@@ -10,7 +10,7 @@ notifications:
   email: false
 stages:
   - name: build
-    if: false
+    if: true
   - deploy
 
 
