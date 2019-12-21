@@ -29,9 +29,9 @@ docker exec rlang0 bash -c "apt install -y wget"
 docker exec rlang0 wget -O /root/output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 test -f wd/output/index.html || exit 1
 
+# before cache
+docker exec rlang0 chown -R `id -u`:`id -g` . /usr/local/lib/R/site-library
+
 # deploy
 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/git && mv wd/git/.git wd/output && rm -r wd/git
 cd wd/output && git add --all && commit -m "Travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty && git push && cd ../..
-
-# before cache
-docker exec rlang0 chown -R `id -u`:`id -g` repo/_bookdown_files /usr/local/lib/R/site-library
