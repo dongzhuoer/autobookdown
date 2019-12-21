@@ -8,12 +8,31 @@
 I establish this website mainly for two purposes:
 
 - customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown), mainly use yellow color to protect eye and expand TOC
-- store source code in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com) to facilitate offiline reading
+- store source code in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com) to facilitate offiline reading (I set up Apache on local for Search utility)
 
 
 
+## to-do
 
-# book list
+- check first author is correct
+- what if `_bookdown_files` already exists
+- r4ds `split_by: section+number`
+- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
+- thesis
+- nutshell
+
+
+
+## add a new book
+
+- Build the book in local, resolve APT & R package dependency.
+- Think out a good name (`niche`), such as `user/repo` (for GitHub), refer to `.travis.yml` for more complicated case.
+- Create `niche` branch on GitHub, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr), link in `index.md`.
+- Travis add new job in `build` stage and clone in `deploy.sh`.
+
+
+
+## book list
 
 | book                                                                             | code                                                                              |
 |----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -29,24 +48,6 @@ I establish this website mainly for two purposes:
 | 《R语言忍者秘笈》by 谢益辉                                                                  | [yihui/r-ninja](https://github.com/yihui/r-ninja)                                 |
 
 
-
-# for developers
-
-## to-do
-
-- check first author is correct
-- what if `_bookdown_files` already exists
-- r4ds `split_by: section+number`
-- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
-- thesis
-- nutshell
-
-## add a new book
-
-- Build the book in local, resolve APT & R package dependency.
-- Think out a good name (`niche`), such as `user/repo` (for GitHub), refer to `.travis.yml` for more complicated case.
-- Create `niche` branch on GitHub, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr), link in `index.md`.
-- Travis add new job in `build` stage and clone in `deploy.sh`.
 
 ## reinitialize
 
