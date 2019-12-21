@@ -14,6 +14,7 @@ I establish this website mainly for two purposes:
 
 ## to-do
 
+- whether `test -f wd/output/index.html` takes effect
 - check first author is correct
 - r4ds `split_by: section+number`
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
