@@ -1,5 +1,7 @@
 #!/bin/bash
 
+test -f "no-exist" || exit 1
+
 # fetch gitbook
 mkdir -p wd/{hadley,tidyverse,yihui,zhuoer}
 git clone --depth 1 -b rstudio/bookdown-demo  https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git wd/rstudio/bookdown-demo
