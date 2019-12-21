@@ -4,12 +4,11 @@
 ## to-do
 
 - mirror -v index.html here
-- hadley 3 & rmarkdown fails
-- what if `_bookdown_files` already exists
 - check first author is correct
+- what if `_bookdown_files` already exists
+- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 - thesis
 - nutshell
-- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 
 ## Overview
 
