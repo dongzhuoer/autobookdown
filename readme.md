@@ -5,7 +5,7 @@
 
 ## Overview
 
-I establish this website mainly for two purpose:
+I establish this website mainly for two purposes:
 
 - customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown), mainly use yellow color to protect eye and expand TOC
 - store source code in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com) to facilitate offiline reading
