@@ -59,6 +59,13 @@ The main work (powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)
 | _blogdown: Creating Websites with R Markdown_ by Yihui Xie                       | [code](https://github.com/rstudio/blogdown/tree/master/docs)          | [output](https://bookdown.dongzhuoer.com/rstudio/blogdown)    |
 
 
+# for developers
+
+`.git/info/exclude`
+```
+_bookdown_files
+repo
+```
 
 -----------------------
 
