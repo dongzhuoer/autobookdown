@@ -8,9 +8,9 @@
 I establish this website mainly for two purposes:
 
 - customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)  
-  mainly expand TOC, protect eye (yellow background) and split by section if chapters are too long  
+  Mainly expand TOC, protect eye (yellow background) and split by section if chapters are too long.  
 - facilitate offiline reading by GitHub Pages in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)  
-  user can either clone the whole website, or download standalone `.zip` for his interested book. However, a server is needed for search utility (I set up a local server by Apache in Dokcer).
+  User can either clone the whole website, or download standalone `.zip` for his interested book. However, a server is needed for search utility (I set up a local server by Apache in Dokcer).
 
 
 
