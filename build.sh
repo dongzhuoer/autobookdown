@@ -1,7 +1,5 @@
 #!/bin/bash
 # build gitbook in Docker
-
-[ -z "$repo" ] && exit 0
 # @param repo, user/wd in GitHub, such as rstudio/bookdown-demo
 # @param wd, directory containing .Rmd files
 # @param url, website of original book
