@@ -14,10 +14,12 @@ I establish this website mainly for two purposes:
 
 ## to-do
 
-- r4ds `split_by: section+number`
-- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
-- thesis
+- r4ds & r-pkgs not work
 - nutshell
+- thesis
+- r4ds `split_by: section+number`, 经 nutshell 测试没问题（有重复都会自动用序号区分），直接到 r4ds 看看那
+- `split_by: section` cause "??" in cross-reference (link is okay), such as rmarkdown-book
+- yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 
 
 

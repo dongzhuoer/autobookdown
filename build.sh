@@ -27,8 +27,7 @@ docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github
 download_link="https://github.com/dongzhuoer/bookdown.dongzhuoer.com/archive/$niche.zip"
 docker exec -w /root/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('/_output.yml', '$url', '$download_link'), output_dir = '/output')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/output')"
-docker exec rlang0 bash -c "apt install -y wget"
-docker exec rlang0 wget -O /output/readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
+docker exec rlang0 Rscript -e "download.file('https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md', 'readme.md')"
 docker exec rlang0 test -f /output/index.html
 
 # deploy
