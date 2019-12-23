@@ -18,6 +18,7 @@ I establish this website mainly for two purposes:
 - nutshell
 - thesis
 - r4ds `split_by: section+number`, 经 nutshell 测试没问题（有重复都会自动用序号区分），直接到 r4ds 看看那
+- r-pkgs `split_by: chapter`
 - `split_by: section` cause "??" in cross-reference (link is okay), such as rmarkdown-book
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 

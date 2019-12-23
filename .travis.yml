@@ -25,8 +25,8 @@ jobs:
     #   env: repo=hadley/r4ds rmd=. niche=$repo apt="" url=http://r4ds.had.co.nz
     # - name: hadley/adv-r 
     #   env: repo=hadley/adv-r rmd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
-    # - name: hadley/r-pkgs
-    #   env: repo=hadley/r-pkgs rmd=. niche=$repo apt="" url=https://r-pkgs.org
+    - name: hadley/r-pkgs
+      env: repo=hadley/r-pkgs rmd=. niche=$repo apt="" url=https://r-pkgs.org
     # - name: rstudio/rmarkdown-book
     #   env: repo=rstudio/rmarkdown-book rmd=. niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/rmarkdown 
     # - name: rstudio/bookdown

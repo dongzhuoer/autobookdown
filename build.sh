@@ -1,11 +1,12 @@
 #!/bin/bash
 # build gitbook in Docker
+
+[ -z "$repo" ] && exit 0
 # @param repo, user/wd in GitHub, such as rstudio/bookdown-demo
 # @param wd, directory containing .Rmd files
 # @param url, website of original book
 # @param niche, ecological space including installr, dongzhuoer.bookdown.com, _output/*yml
 # @param apt, packages to install via APT
-
 
 # create container
 docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
