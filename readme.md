@@ -7,18 +7,20 @@
 
 I establish this website mainly for two purposes:
 
-- customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown), mainly use yellow color to protect eye and expand TOC
-- store source code in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com) to facilitate offiline reading (I set up Apache on local for Search utility)
+- customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)  
+  mainly expand TOC, protect eye (yellow background) and split by section if chapters are too long  
+- facilitate offiline reading by GitHub Pages in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)  
+  user can either clone the whole website, or download standalone `.zip` for his interested book. However, a server is needed for search utility (I set up a local server by Apache in Dokcer).
 
 
 
 ## to-do
 
-- r4ds & r-pkgs not work
+- r-pkgs `split_by: section` would fail, but test -f index.html no error
 - nutshell
 - thesis
 - r4ds `split_by: section+number`, 经 nutshell 测试没问题（有重复都会自动用序号区分），直接到 r4ds 看看那
-- r-pkgs `split_by: chapter`
+- r-pkgs `split_by: section`
 - `split_by: section` cause "??" in cross-reference (link is okay), such as rmarkdown-book
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 
@@ -50,6 +52,30 @@ I establish this website mainly for two purposes:
 
 
 
+## candidate
+
+- https://github.com/cpsievert/plotly_book
+- https://github.com/csgillespie/efficientR
+- https://github.com/hadley/mastering-shiny
+- https://github.com/wch/rgcookbook
+- https://github.com/tidyverse/design
+- https://github.com/hadley/ggplot2-book
+- https://github.com/hadley/r-pkgs
+
+```r
+remotes::install_github("dongzhuoer/installr/hadley/r-pkgs", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/csgillespie/efficientR", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/hadley/mastering-shiny", upgrade = TRUE)
+remotes::install_github("dongzhuoer/installr/wch/rgcookbook", upgrade = TRUE) # libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libjq-dev
+remotes::install_github("dongzhuoer/installr/tidyverse/design", upgrade = TRUE) 
+remotes::install_github("dongzhuoer/installr/hadley/ggplot2-book", upgrade = TRUE) # remotes::install_github("ropensci/USAboundariesData")
+```
+
+- https://topepo.github.io/caret/index.html
+
+
+
 ## reinitialize
 
 `.git/info/exclude`
@@ -66,47 +92,5 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 3.0 Un
 
 
 
-The website of my writing and favorite programming books.
 
-two purpose (powered by [build-bookdown](https://github.com/dongzhuoer/build-bookdown)).
-
-1. Use GitHub pages to host the website
-1. Download a book as `.zip` for _offline_ reading, since each book lives in its own branch
-
-
-# Implementation
-
-- `gh-pages` branch contains whole website, other branches contain individual books.
-- `master` branch runs Travis CI,
-  1. fetch book contents from individual branches
-  1. build `index.html`, create `CNAME` and fetch CC 4.0 `readme.md`
-  1. deploy to `gh-pages` branch
-
-# to-do
-
-1. pass `- env` as shell parameter
-1. use separate directory for each book's cache
-
-# new book
-
-- https://github.com/cpsievert/plotly_book
-- https://github.com/csgillespie/efficientR
-- https://github.com/hadley/mastering-shiny
-- https://github.com/wch/rgcookbook
-- https://github.com/tidyverse/design
-- https://github.com/hadley/ggplot2-book
-- https://github.com/hadley/r-pkgs
-
-
-```r
-remotes::install_github("dongzhuoer/installr/hadley/r-pkgs", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/csgillespie/efficientR", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/hadley/mastering-shiny", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/wch/rgcookbook", upgrade = TRUE) # libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libjq-dev
-remotes::install_github("dongzhuoer/installr/tidyverse/design", upgrade = TRUE) 
-remotes::install_github("dongzhuoer/installr/hadley/ggplot2-book", upgrade = TRUE) # remotes::install_github("ropensci/USAboundariesData")
-```
-
-- https://topepo.github.io/caret/index.html
 
