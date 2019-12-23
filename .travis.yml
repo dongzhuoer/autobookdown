@@ -19,8 +19,8 @@ jobs:
     # if a book is not in GitHub, such as fool/weird in GitLab
     # then repo=dongzhuoer/gooddown rmd=gitlab/fool/weird niche=gitlab-fool/weird                
     - stage: build  
-      name: place holder
-      script: skip
+      name: place holder  
+      script: skip  # without this toy job, comment first book would cuase error
     - name: rstudio/bookdown-demo
       env: repo=rstudio/bookdown-demo rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/bookdown-demo
     - name: hadley/r4ds
