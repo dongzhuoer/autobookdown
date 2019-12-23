@@ -25,7 +25,7 @@ docker exec ubuntu0 bash -c "rm -rf */*/.git"
 
 # auxiliary files
 docker exec ubuntu0 touch .nojekyll
-docker exec ubuntu0 echo bookdown.dongzhuoer.com > CNAME
+docker exec ubuntu0 bash -c "echo bookdown.dongzhuoer.com > CNAME"
 docker cp index.md ubuntu0:/root && docker exec ubuntu0 pandoc index.md -s -o index.html
 docker exec ubuntu0 wget -O readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
 
