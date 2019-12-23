@@ -35,8 +35,8 @@ jobs:
     #   env: repo=rstudio/blogdown rmd=docs niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/blogdown 
     # - name: tidyverse/style
     #   env: repo=tidyverse/style rmd=. niche=$repo apt="" url=http://style.tidyverse.org
-    # - name: tidyverse/tidyeval
-    #   env: repo=tidyverse/tidyeval rmd=. niche=$repo apt="" url=https://tidyeval.tidyverse.org
+    - name: tidyverse/tidyeval
+      env: repo=tidyverse/tidyeval rmd=. niche=$repo apt="" url=https://tidyeval.tidyverse.org
     # - name: yihui/r-ninja
     #   env: repo=yihui/r-ninja rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/r-ninja 
     - stage: deploy
