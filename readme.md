@@ -16,12 +16,13 @@ I establish this website mainly for two purposes:
 
 ## to-do
 
-- r-pkgs `split_by: section` would fail, but test -f index.html no error
 - nutshell
 - thesis
+- r-pkgs `split_by: section` would fail, but test -f index.html no error
+- 在 **本地** 检查每一本书，没有很长章节的话，就不要 `split_by: section` 了
+- `split_by: section` cause "??" in cross-reference (link is okay), such as rmarkdown-book
 - r4ds `split_by: section+number`, 经 nutshell 测试没问题（有重复都会自动用序号区分），直接到 r4ds 看看那
 - r-pkgs `split_by: section`
-- `split_by: section` cause "??" in cross-reference (link is okay), such as rmarkdown-book
 - yihui/bookdown add `new_session: yes` in `_bookdown.yml`
 
 

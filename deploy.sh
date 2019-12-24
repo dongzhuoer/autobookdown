@@ -27,7 +27,7 @@ docker exec ubuntu0 bash -c "rm -rf */*/.git"
 docker exec ubuntu0 touch .nojekyll
 docker exec ubuntu0 bash -c "echo bookdown.dongzhuoer.com > CNAME"
 docker cp index.md ubuntu0:/root && docker exec ubuntu0 pandoc index.md -s -o index.html
-docker exec ubuntu0 wget -O readme.md https://gist.githubusercontent.com/dongzhuoer/c19d456cf8c1bd977a2f7916f61beee8/raw/cc-license.md
+docker exec ubuntu0 wget -O readme.md https://raw.githubusercontent.com/dongzhuoer/gist/master/cc-license.md
 
 # push to gh-pages
 docker exec ubuntu0 git clone --depth 1 -b gh-pages https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git git 
