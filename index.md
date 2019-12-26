@@ -17,18 +17,20 @@ td:first-child {
 [online version](https://bookdown.dongzhuoer.com/), [GitHub repo](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)
 
 
-| Author         | Title                                                               |
-|----------------|---------------------------------------------------------------------|
-| Yihui Xie      | [_A Minimal Book Example_](rstudio/bookdown-demo)                                            |
-| Hadley Wickham | [_R for data science_](hadley/r4ds)                                                |
-| Hadley Wickham | [_Advanced R_](hadley/adv-r)                                                        |
-| Hadley Wickham | [_R packages_](hadley/r-pkgs)                                                        |
-| Yihui Xie      | [_R Markdown: The Definitive Guide_](rstudio/rmarkdown-book)                                  |
+| Author         | Title                                                                                   |
+|----------------|-----------------------------------------------------------------------------------------|
+| Yihui Xie      | [_A Minimal Book Example_](rstudio/bookdown-demo)                                       |
+| Hadley Wickham | [_R for data science_](hadley/r4ds)                                                     |
+| Hadley Wickham | [_Advanced R_](hadley/adv-r)                                                            |
+| Hadley Wickham | [_R packages_](hadley/r-pkgs)                                                           |
+| Yihui Xie      | [_R Markdown: The Definitive Guide_](rstudio/rmarkdown-book)                            |
 | Yihui Xie      | [_bookdown: Authoring Books and Technical Documents with R Markdown_](rstudio/bookdown) |
 | Yihui Xie      | [_blogdown: Creating Websites with R Markdown_](rstudio/blogdown)                       |
-| Hadley Wickham | [_Tidy evaluation_](tidyverse/tidyeval)                                                   |
-| Hadley Wickham | [_The tidyverse style guide_](tidyverse/style)                                         |
-| 谢益辉            | [《R语言忍者秘笈》](yihui/r-ninja)                                                             |
+| Hadley Wickham | [_Tidy evaluation_](tidyverse/tidyeval)                                                 |
+| Hadley Wickham | [_The tidyverse style guide_](tidyverse/style)                                          |
+| Zhuoer Dong    | [Programming in a nutshell](dongzhuoer/nutshell)                                                              |
+| Zhuoer Dong    | [Undergraduate thesis](dongzhuoer/thesis)                                                              |
+| 谢益辉            | [《R语言忍者秘笈》](yihui/r-ninja)                                                              |
 
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)  

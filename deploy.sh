@@ -8,7 +8,7 @@ docker exec travis rm .bashrc .profile
 docker exec travis bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > .gitconfig'
 
 # fetch gitbook
-docker exec travis mkdir {hadley,tidyverse,yihui,zhuoer}
+docker exec travis mkdir {hadley,tidyverse,yihui,dongzhuoer}
 docker exec travis git clone --depth 1 -b rstudio/bookdown-demo  https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git rstudio/bookdown-demo
 docker exec travis git clone --depth 1 -b hadley/r4ds            https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git hadley/r4ds
 docker exec travis git clone --depth 1 -b hadley/adv-r           https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git hadley/adv-r
@@ -18,6 +18,8 @@ docker exec travis git clone --depth 1 -b rstudio/bookdown       https://github.
 docker exec travis git clone --depth 1 -b rstudio/blogdown       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git rstudio/blogdown
 docker exec travis git clone --depth 1 -b tidyverse/style        https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git tidyverse/style
 docker exec travis git clone --depth 1 -b tidyverse/tidyeval     https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git tidyverse/tidyeval
+docker exec travis git clone --depth 1 -b dongzhuoer/nutshell    https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git dongzhuoer/nutshell
+docker exec travis git clone --depth 1 -b dongzhuoer/thesis       https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git dongzhuoer/thesis
 docker exec travis git clone --depth 1 -b yihui/r-ninja          https://github.com/dongzhuoer/bookdown.dongzhuoer.com.git yihui/r-ninja
 docker exec travis bash -c "rm -rf */*/.git"
 

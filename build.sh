@@ -26,7 +26,7 @@ download_link="https://github.com/dongzhuoer/bookdown.dongzhuoer.com/archive/$ni
 docker exec -w /root/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('/_output.yml', '$url', '$download_link'), output_dir = '/output')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/output')"
 docker exec rlang0 Rscript -e "download.file('https://raw.githubusercontent.com/dongzhuoer/gist/master/cc-license.md', 'readme.md')"
-docker exec rlang0 test -f /output/index.html
+docker exec rlang0 test -f /output/index.html || exit 1
 
 # deploy
 docker exec rlang0 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /git 
