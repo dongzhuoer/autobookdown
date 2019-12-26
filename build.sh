@@ -7,9 +7,8 @@
 # @param apt, packages to install via APT
 
 # create container
-docker pull dongzhuoer/rlang:zhuoerdown > /dev/null
     # docker rm -f rlang0
-docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown
+docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown 2> /dev/null
 
 # prepare files
 docker exec rlang0 rm -r /root

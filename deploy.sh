@@ -2,9 +2,8 @@
 
 
 # create container
-docker pull dongzhuoer/ci:base > /dev/null
     # docker rm -f travis
-docker run -dt --name travis -w /root dongzhuoer/ci:base
+docker run -dt --name travis -w /root dongzhuoer/ci:base 2> /dev/null
 docker exec travis rm .bashrc .profile
 docker exec travis bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > .gitconfig'
 
