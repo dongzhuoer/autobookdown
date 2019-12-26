@@ -13,7 +13,6 @@ stages:
     if: commit_message !~ /^only deploy/
   - deploy
 
-
 jobs:
   include:
     # if a book is not in GitHub, such as fool/weird in GitLab
