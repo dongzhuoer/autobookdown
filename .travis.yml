@@ -10,7 +10,7 @@ notifications:
   email: false
 stages:
   - name: build
-    if: true
+    if: commit_message !~ /^only deploy/
   - deploy
 
 
