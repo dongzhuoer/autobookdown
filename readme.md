@@ -31,7 +31,7 @@ I establish this website mainly for two purposes:
 
 - Build the book in local, make sure no `_bookdown_files/` folder, resolve APT & R package dependency.
 - Think out a good name (`niche`), such as `user/repo` (for GitHub), refer to `.travis.yml` for more complicated case.
-- Create `niche` branch on GitHub, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr), link in `index.md`.
+- Create `niche` branch on [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com), link in `index.md`, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr).
 - Travis add new job in `build` stage and clone in `deploy.sh`.
 
 
