@@ -16,7 +16,7 @@ jobs:
     # then repo=dongzhuoer/gooddown rmd=gitlab/fool/weird niche=gitlab-fool/weird                
     - stage: build  
       name: place holder  
-      script: skip  # without this toy job, comment first book would cuase error
+      script: skip  # without this toy job, comment first job would cuase error
     - name: rstudio/bookdown-demo
       env: repo=rstudio/bookdown-demo rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/bookdown-demo
     - name: hadley/r4ds
