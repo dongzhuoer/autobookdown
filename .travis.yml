@@ -6,10 +6,6 @@ git:
 cache: 
   directories: [$TRAVIS_BUILD_DIR/_bookdown_files, $HOME/.local/lib/R/site-library]
 script: bash -x build.sh
-stages:
-  - name: build
-    if: commit_message !~ /^only deploy/
-  - deploy
 jobs:
   include:
     # if a book is not in GitHub, such as fool/weird in GitLab
@@ -38,5 +34,5 @@ jobs:
     - name: yihui/r-ninja
       env: repo=yihui/r-ninja rmd=. niche=$repo apt="" url=https://bookdown.org/yihui/r-ninja 
     - stage: deploy
-      name: merge into gh-pages  
-      script: bash -x deploy.sh
+      name: trigger build-website to merge all books into one branch  
+      script: bash -x trigger.sh

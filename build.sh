@@ -22,14 +22,14 @@ docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = don
 docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
 
 # build book
-download_link="https://github.com/dongzhuoer/bookdown.dongzhuoer.com/archive/$niche.zip"
+download_link="https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com/-/archive/$niche/bookdown.dongzhuoer.com-`echo $niche | sed 's/\//-/'`.zip"
 docker exec -w /root/$rmd rlang0 Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('/_output.yml', '$url', '$download_link'), output_dir = '/output')"
 docker exec rlang0 Rscript -e "file.copy(zhuoerdown:::pkg_file('bookdown.css'), '/output')"
 docker exec rlang0 Rscript -e "download.file('https://raw.githubusercontent.com/dongzhuoer/gist/master/cc-license.md', 'readme.md')"
 docker exec rlang0 test -f /output/index.html || exit 1
 
 # deploy
-docker exec rlang0 git clone --depth 1 -b $niche https://$GITHUB_PAT@github.com/dongzhuoer/bookdown.dongzhuoer.com.git /git 
+docker exec rlang0 git clone --depth 1 -b $niche https://gitlab-ci-token:$GITLAB_TOKEN@gitlab.com/dongzhuoer/bookdown.dongzhuoer.com.git /git 
 docker exec rlang0 mv /git/.git /output
 docker exec rlang0 rm -rf /git
 docker exec -w /output rlang0 git add --all
