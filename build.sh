@@ -32,6 +32,7 @@ docker exec rlang0 test -f /output/index.html || exit 1
 docker exec rlang0 git clone --depth 1 -b $niche https://gitlab-ci-token:$GITLAB_TOKEN@gitlab.com/dongzhuoer/bookdown.dongzhuoer.com.git /git 
 docker exec rlang0 mv /git/.git /output
 docker exec rlang0 rm -rf /git
+docker exec -w /output rlang0 git rm -r --cached .
 docker exec -w /output rlang0 git add --all
 docker exec -w /output rlang0 git commit -m "Travis build at `date '+%Y-%m-%d %H:%M:%S'`" --allow-empty 
 docker exec -w /output rlang0 git push
