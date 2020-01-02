@@ -9,7 +9,7 @@ I establish this website mainly for two purposes:
 
 - customize apprearance, powered by [zhuoerdown](https://github.com/dongzhuoer/zhuoerdown)  
   Mainly expand TOC, protect eye (yellow background) and split by section if chapters are too long.  
-- facilitate offiline reading by GitHub Pages in [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com)  
+- facilitate offiline reading by GitHub Pages in [bookdown.dongzhuoer.com](https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com)  
   User can either clone the whole website, or download standalone `.zip` for his interested book. However, a server is needed for search utility (I set up a local server by Apache in Dokcer).
 
 
@@ -31,7 +31,7 @@ I establish this website mainly for two purposes:
 
 - Build the book in local, make sure no `_bookdown_files/` folder, resolve APT & R package dependency.
 - Think out a good name (`niche`), such as `user/repo` (for GitHub), refer to `.travis.yml` for more complicated case.
-- Create `niche` branch on [bookdown.dongzhuoer.com](https://github.com/dongzhuoer/bookdown.dongzhuoer.com), link in `index.md`, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr).
+- Create `niche` branch on [bookdown.dongzhuoer.com](https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com), link in `index.md`, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr).
 - Travis add new job in `build` stage and clone in `deploy.sh`.
 
 
