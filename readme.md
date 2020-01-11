@@ -31,8 +31,8 @@ I establish this website mainly for two purposes:
 
 - Build the book in local, make sure no `_bookdown_files/` folder, resolve APT & R package dependency.
 - Think out a good name (`niche`), such as `user/repo` (for GitHub), refer to `.travis.yml` for more complicated case.
-- Create `niche` branch on [bookdown.dongzhuoer.com](https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com), link in `index.md`, `_output/niche/.yml`, `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr).
-- Travis add new job in `build` stage and clone in `deploy.sh`.
+- Create `_output/niche/.yml`, `niche` branch on [bookdown.dongzhuoer.com](https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com), link in `bookdown.Rmd` & `bookdown.sh` of [website](https://github.com/dongzhuoer/website) , `niche/DESCRIPTION` in [installr](https://github.com/dongzhuoer/installr).
+- Travis add new job.
 
 
 
@@ -55,29 +55,26 @@ I establish this website mainly for two purposes:
 
 ## candidate
 
-- https://github.com/cpsievert/plotly_book
-- https://github.com/csgillespie/efficientR
-- https://github.com/hadley/mastering-shiny
-- https://github.com/wch/rgcookbook
-- https://github.com/tidyverse/design
-- https://github.com/hadley/ggplot2-book
-- https://github.com/hadley/r-pkgs
-
 ```r
-remotes::install_github("dongzhuoer/installr/hadley/r-pkgs", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/csgillespie/efficientR", upgrade = TRUE)
 remotes::install_github("dongzhuoer/installr/hadley/mastering-shiny", upgrade = TRUE)
-remotes::install_github("dongzhuoer/installr/wch/rgcookbook", upgrade = TRUE) # libgdal-dev libprotobuf-dev protobuf-compiler libv8-dev libjq-dev
-remotes::install_github("dongzhuoer/installr/tidyverse/design", upgrade = TRUE) 
-remotes::install_github("dongzhuoer/installr/hadley/ggplot2-book", upgrade = TRUE) # remotes::install_github("ropensci/USAboundariesData")
+remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = TRUE)
 ```
 
+- https://github.com/cpsievert/plotly_book
+- https://github.com/hadley/mastering-shiny
 - https://topepo.github.io/caret/index.html
 
 
 
-## reinitialize
+## for developers
+
+- local
+
+```bash
+Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('zhuoer.yml', '', '')); file.copy(zhuoerdown:::pkg_file('bookdown.css'), '_book')"
+```
+
+- reinitialize
 
 `.git/info/exclude`
 ```

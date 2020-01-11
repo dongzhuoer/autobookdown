@@ -17,13 +17,17 @@ jobs:
     - name: hadley/adv-r 
       env: repo=hadley/adv-r rmd=. niche=$repo apt="pandoc-citeproc" url=https://adv-r.hadley.nz
     - name: hadley/r-pkgs
-      env: repo=hadley/r-pkgs rmd=. niche=$repo apt="" url=https://r-pkgs.org
+      env: repo=hadley/r-pkgs rmd=. niche=$repo apt="" url=https://r-pkgs.org  
+    - name: hadley/ggplot2-book
+      env: repo=hadley/ggplot2-book rmd=. niche=$repo apt="libv8-dev libudunits2-0 libproj13 libgdal20 libjq1" url=https://ggplot2-book.org  
     - name: rstudio/rmarkdown-book
       env: repo=rstudio/rmarkdown-book rmd=. niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/rmarkdown 
     - name: rstudio/bookdown
       env: repo=rstudio/bookdown rmd=inst/examples niche=$repo apt="libcairo2-dev texlive-latex-base" url=https://bookdown.org/yihui/bookdown 
     - name: rstudio/blogdown
       env: repo=rstudio/blogdown rmd=docs niche=$repo apt="libmagick++-dev" url=https://bookdown.org/yihui/blogdown 
+    - name: tidyverse/design
+      env: repo=tidyverse/design rmd=. niche=$repo apt="" url=http://design.tidyverse.org
     - name: tidyverse/style
       env: repo=tidyverse/style rmd=. niche=$repo apt="" url=http://style.tidyverse.org
     - name: tidyverse/tidyeval
