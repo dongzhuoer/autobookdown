@@ -81,6 +81,14 @@ Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('zhuoer.yml', '',
 _bookdown_files
 ```
 
+- parse package dependency
+
+```bash
+# possibly used pacakge
+cat *.Rmd | grep -Po '[\w\.]+(?=::)' | sort -u | sed 's/$/,/' 
+# cited package
+cat *.Rmd | grep -Po '(?<=\[@R-)[\w\.]+' | sort -u | sed 's/$/,/' 
+```
 
 
 -----------------------
