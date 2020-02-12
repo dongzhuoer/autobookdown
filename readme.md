@@ -71,7 +71,7 @@ remotes::install_github("dongzhuoer/installr/cpsievert/plotly_book", upgrade = T
 - local
 
 ```bash
-Rscript -e "bookdown::render_book('', zhuoerdown::make_gitbook('zhuoer.yml', '', '')); file.copy(zhuoerdown:::pkg_file('bookdown.css'), '_book')"
+Rscript -e "out<-'~/gitdisk/bookdown.dongzhuoer.com/hadley/ggplot2-book/'; bookdown::render_book('', zhuoerdown::make_gitbook('zhuoer.yml', '', ''), output_dir = out); file.copy(zhuoerdown:::pkg_file('bookdown.css'), out)"
 ```
 
 - reinitialize
