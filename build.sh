@@ -9,9 +9,9 @@
 # create container
     # docker rm -f rlang0
 docker run -dt --name rlang0 -v $HOME/.local/lib/R/site-library:/usr/local/lib/R/site-library dongzhuoer/rlang:zhuoerdown 2> /dev/null
+[ "$repo" = "hadley/r-pkgs" ] && echo only debug as almost identical to testci
 
 # prepare files
-[ "$repo" = "hadley/r-pkgs" ] && rm -r $HOME/.local/lib/R/site-library
 docker exec rlang0 rm -r /root
 docker exec rlang0 git clone --depth 1 https://github.com/$repo.git /root
 docker cp _output/$niche.yml rlang0:/_output.yml
