@@ -20,7 +20,7 @@ docker cp _bookdown_files rlang0:/root
 # dependency
 docker exec rlang0 bash -c 'echo -e "[user]\n\tname = Zhuoer Dong\n\temail = dongzhuoer@mail.nankai.edu.cn\n" > /root/.gitconfig'
 [ "$apt" ] && docker exec rlang0 bash -c "apt update && apt install -y $apt"
-docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche')"
+docker exec -e GITHUB_PAT=$GITHUB_PAT rlang0 Rscript -e "remotes::install_github('dongzhuoer/installr/$niche', force = T)"
 
 # build book
 download_link="https://gitlab.com/dongzhuoer/bookdown.dongzhuoer.com/-/archive/$niche/bookdown.dongzhuoer.com-`echo $niche | sed 's/\//-/'`.zip"
